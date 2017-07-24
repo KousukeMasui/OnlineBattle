@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>PUSH☆PUSH タイトル画面</title>
+</head>
+<body>
+    <form action="">
+        <input id="name" autocomplete="off" /><button>Send</button>
+    </form>
+    <script src="../js/socket.io/socket.io.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script type="text/javascript">
+        var socket = io();
+
+        $('form').submit(function () {
+            var message = $('#name').val();
+            socket.emit('userName', message);//送信
+            return (false);
+        });
+    </script>
+</body>
+</html>

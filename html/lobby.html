@@ -1,0 +1,16 @@
+<html>
+<head>
+    <title>PUSH™PUSH ƒƒr[‰æ–Ê</title>
+</head>
+<body>
+    <ul id="userNames"></ul>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/jquery.min.js"></script>
+    <script type="text/javascript">
+        var socket = io();
+        socket.on('userName', function (msg) {//óM
+            $('#userNames').append($('<li>').text(msg));
+        });
+    </script>
+</body>
+</html>
